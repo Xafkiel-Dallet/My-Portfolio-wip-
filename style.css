@@ -4,6 +4,21 @@
   text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
 
+.about-me {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  font-size: 16px;
+  line-height: 1.6;
+}
 
 .profile-container {
   text-align: center;
