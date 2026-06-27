@@ -1,10 +1,10 @@
 .navbar {
-   background-color: rgba(105, 105, 105, 0.5);
-   border-radius: 15px;                  
-   backdrop-filter: blur(8px);            
+  background: rgba(255, 255, 255, 0.15);
+backdrop-filter: blur(10px);
+border-radius: 15px;          
    -webkit-backdrop-filter: blur(8px);    
    padding: 5px 10px;                        
-   border: 1px solid rgba(255, 255, 255, 0.5);
+   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .navbar ul {
@@ -27,7 +27,7 @@
 
 .navbar a:hover {
    background-color: dimgray;
-   border-radius: 10px; /* optional rounded hover */
+   border-radius: 10px; 
 }
 
 .name{
