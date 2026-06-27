@@ -1,16 +1,33 @@
-.navbar ul{
-   list-style-type: none;
-   background-color: darkgrey;
-   padding: 0px;
-   margin: 0px;
+.navbar {
+   background-color: rgba(105, 105, 105, 0.5);
+   border-radius: 15px;                  
+   backdrop-filter: blur(8px);            
+   -webkit-backdrop-filter: blur(8px);    
+   padding: 5px 10px;                        
+   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.navbar a{
+.navbar ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.navbar a {
    color: white;
    text-decoration: none;
    padding: 15px;
    display: block;
    text-align: center;
+}
+
+.navbar a:hover {
+   background-color: dimgray;
+   border-radius: 10px; /* optional rounded hover */
 }
 
 .name{
@@ -38,6 +55,7 @@
 .profile-container {
   text-align: center;
   margin-bottom: 15px;
+   margin-top: 20px;
 }
 
 .profile-container img {
