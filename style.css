@@ -1,3 +1,18 @@
+.navbar ul{
+   list-style-type: none;
+   background-color: darkgrey;
+   padding: 0px;
+   margin: 0px;
+}
+
+.navbar a{
+   color: white;
+   text-decoration: none;
+   padding: 15px;
+   display: block;
+   text-align: center;
+}
+
 .name{
    color: white;
   text-align: center;
