@@ -1,37 +1,78 @@
-.navbar {
-  background: rgba(255, 255, 255, 0.15);
-backdrop-filter: blur(10px);
-border-radius: 15px;          
-   -webkit-backdrop-filter: blur(8px);    
-   padding: 5px 10px;                        
-   border: 1px solid rgba(255, 255, 255, 0.3);
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
 
-.navbar ul {
-   list-style-type: none;
-   padding: 0;
-   margin: 0;
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+.navbar li {
+  position: relative;
+}
+
+.navbar li ul {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.navbar li:hover ul {
+  display: block;
 }
 
 .navbar a {
-   color: white;
-   text-decoration: none;
-   padding: 15px;
-   display: block;
-   text-align: center;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
 }
 
 .navbar a:hover {
-   background-color: dimgray;
-   border-radius: 10px; 
+  background-color: dimgray;
+  border-radius: 10px;
 }
 
-.name{
-   color: white;
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  list-style: none;
+  padding: 10px;
+  min-width: 160px;
+  z-index: 1000;
+}
+
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 12px;
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.dropdown-menu li a:hover {
+  background-color: dimgray;
+  border-radius: 5px;
+}
+
+.name {
+  color: white;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
@@ -54,8 +95,7 @@ border-radius: 15px;
 
 .profile-container {
   text-align: center;
-  margin-bottom: 15px;
-   margin-top: 20px;
+  margin: 20px 0 15px;
 }
 
 .profile-container img {
@@ -95,7 +135,6 @@ border-radius: 15px;
   transform: translateY(20px);
   transition: all 0.6s ease-out;
 }
-
 
 .fade-in.visible {
   opacity: 1;
