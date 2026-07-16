@@ -1,5 +1,10 @@
 .navbar {
-  width: 100%;              
+  position: fixed;
+  top: 0;
+  left: 50;
+  z-index: 100;
+  margin: 10px auto;
+  width: 95%;
   display: flex;
   justify-content: space-between; 
   align-items: center;
@@ -114,4 +119,15 @@
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+  .logo a {
+    font-size: 18px;
+  }
+  .menu-toggle {
+    font-size: 22px;
+    padding: 8px 12px;
+  }
 }
