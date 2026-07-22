@@ -100,6 +100,38 @@
   z-index: -2;
 }
 
+.social-links {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+.social-links i {
+  margin-right: 8px;
+}
+
+
+
 .overlay {
   position: fixed;
   top: 0;
