@@ -12,8 +12,6 @@
   right: 0;
   z-index: 100;
   margin: 0 auto;
-  
-  
   display: flex;
   justify-content: space-between; 
   align-items: center;
@@ -26,6 +24,22 @@
   box-sizing: border-box;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
+
+.navlinks {
+  display: none;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navlinks a {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .logo a {
   color: white;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
@@ -35,6 +49,7 @@
 }
 
 .menu-toggle {
+  display: block;
   font-size: 28px;
   cursor: pointer;
   color: white;
@@ -172,6 +187,16 @@
     max-width: 1200px;
     margin: 0 auto;
   }
+  
+  .menu-toggle {
+        display: none;   
+    }
+  
+  .navlinks {
+        display: flex;   
+        gap: 30px;
+    }
+}
 
   .profile-container {
     flex: 1;
