@@ -84,6 +84,7 @@
   max-width: 700px;
   margin: 40px auto;
   padding: 20px;
+  font-size: 16px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
@@ -208,5 +209,8 @@
     flex: 2;
     margin: 0;
     text-align: left;
+    font-size: 18px;
+    max-width: 900px;
+    
   }
 }
