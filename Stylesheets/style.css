@@ -194,8 +194,8 @@
 
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 
   &.visible {
     opacity: 1;
@@ -205,6 +205,7 @@
 
 
 @media (min-width: 768px) {
+
   .hero {
     flex-direction: row-reverse;
     align-items: center;
@@ -225,17 +226,35 @@
     }
   }
 
+  
   .profile-container {
     flex: 1;
     margin: 0;
   }
 
-  .firstcontainer {
+  .firstcontainer.fade-in {
     flex: 2;
     margin: 0;
     text-align: left;
     font-size: 18px;
     max-width: 900px;
     line-height: 1.15;
+  }
+
+  
+  .profile-container.fade-in {
+    transform: translateX(60px);
+  }
+
+  .profile-container.fade-in.visible {
+    transform: translateX(0);
+  }
+  
+  .firstcontainer.fade-in {
+    transform: translateX(-60px);
+  }
+
+  .firstcontainer.fade-in.visible {
+    transform: translateX(0);
   }
 }
