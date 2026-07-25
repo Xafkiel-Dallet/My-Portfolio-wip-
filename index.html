@@ -1,79 +1,212 @@
-<!DOCTYPE html>
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  z-index: -2;
+}
 
-<html>
-<head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <title>My Portfolio</title>
-</head>
-<body>
-    <div class="background"></div>
-  <div class="overlay"></div>
-  
-  
-  
- <nav class="navbar fade-in">
-    <div class="logo">
-        <a>Russel Dave Endico</a>
-    </div>
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: -1;
+}
 
-    <ul class="navlinks">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Tech Stack</a></li>
-    </ul>
 
-    <div class="menu-toggle">&#9776;</div>
-</nav>
-  
-  
-  
-  <div class="hero">
-    <div class="profile-container fade-in">
-    <img src="profile.jpg" alt="Profile">
-      <div class="name fade-in">
-    <h1>Russel Endico</h1>
-  </div>
-  </div>
-  
-  
-  
-  
-<div class="about-me fade-in">
-  <h1>About Me</h1>
-  <p>
-    I am currently a college student at Cavite State University – Naic Campus, pursuing my studies while building my skills in web development. I aspire to become a frontend developer someday because I enjoy creating websites and designing user-friendly interfaces that people can interact with. At the moment, I am learning HTML, CSS, and JavaScript, and I continuously work on personal and school projects to improve my abilities. I am also exploring tools like GitHub to showcase my work and track my progress. My goal is to become a skilled and creative developer who can build modern, responsive, and visually appealing websites in the future.
-  </p>
-</div>
-    </div>
-  
-  <div class="social-links fade-in">
-  <ul>
-    <li><a href="https://github.com/Xafkiel-Dallet" target="_blank"><i class="fab fa-github"></i> </a></li>
-    <li><a href="https://www.facebook.com/share/1Un2viy5RL/" target="_blank"><i class="fab fa-facebook"></i> </a></li>
-    <li><a href="wip" target="_blank"><i class="fab fa-linkedin"></i> </a></li>
-    <li><a href="ruzuros60@gmail.com"><i class="fas fa-envelope"></i> </a></li>
-  </ul>
-</div>
-  
-  
-  <script>
-    const fadeElements = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
+.navbar {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 100;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 
-    fadeElements.forEach(el => observer.observe(el));
-  </script>
-  
-  
-  <script src="js.js"></script>
-  
-</body>
-</html>
+  .logo a {
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .navlinks {
+    display: none;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+
+    a {
+      display: flex;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    list-style: none;
+    padding: 10px;
+    min-width: 160px;
+    z-index: 1000;
+  }
+}
+
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.profile-container {
+  text-align: center;
+  margin: 10px 0 15px;
+
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.name {
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.about-me {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+.social-links {
+  text-align: center;
+  margin: 30px auto;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      color: #ffd700;
+      transform: scale(1.1);
+    }
+
+    i {
+      margin-right: 8px;
+    }
+  }
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .navbar {
+    .menu-toggle {
+      display: none;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 30px;
+    }
+  }
+
+  .profile-container {
+    flex: 1;
+    margin: 0;
+  }
+
+  .about-me {
+    flex: 2;
+    margin: 0;
+    text-align: left;
+    font-size: 18px;
+    max-width: 900px;
+  }
+}
