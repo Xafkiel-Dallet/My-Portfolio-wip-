@@ -113,10 +113,9 @@
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
-
 .firstcontainer {
   width: min(90%, 700px);
-  margin: 40px auto;
+  margin: 40px 0 auto; 
   padding: 20px;
   font-size: 16px;
   line-height: 1.6;
@@ -130,7 +129,6 @@
   color: #fff;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
-
 .firstcontainer h1 {
   margin: 0 0 16px;
   line-height: 1.15;
