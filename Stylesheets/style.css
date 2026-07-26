@@ -117,7 +117,7 @@
 }
 
 .firstcontainer {
-  max-width: 700px;
+  width: min(90%, 700px);
   margin: 40px auto;
   padding: 20px;
   font-size: 16px;
@@ -236,7 +236,7 @@
     margin: 0 0 0 30px;
     text-align: left;
     font-size: 18px;
-    max-width: 900px;
+    width: min(90%, 900px);
     line-height: 1.15;
   }
   
