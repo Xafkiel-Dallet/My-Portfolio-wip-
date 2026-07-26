@@ -85,8 +85,15 @@
     fadeElements.forEach(el => observer.observe(el));
   </script>
   
-  <script>
-  window.scrollTo(0, 0);
+<script>
+  window.addEventListener("load", () => {
+    // Force the page to start at the top every time
+    window.scrollTo(0, 0);
+    // Optional: prevent browsers from remembering scroll position
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  });
 </script>
   
   <script src="js.js"></script>
