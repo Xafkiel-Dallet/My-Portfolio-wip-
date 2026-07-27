@@ -29,12 +29,12 @@
 </nav>
   
   
-  
   <div class="hero">
     <div class="profile-container fade-in">
     <img src="profile.jpg" alt="Profile">
       <div class="name fade-in">
     <h1>Russel Endico</h1>
+        <span id="typing-text"></span>
   </div>
   </div>
   
@@ -59,8 +59,14 @@
 <span class="pill">Front End Dev</span>
 <span class="pill">UI/UX</span>
   
-</div>
-    </div>
+</div>  
+  </div>
+  
+  <div class="pillsec fade-in">
+     <a href="cv.pdf" download class="pill">Download CV</a>
+    <span class="pill">View Projects</span>
+   
+  </div>
   
   <div class="social-links fade-in">
   <ul>
@@ -87,16 +93,17 @@
   
 <script>
   window.addEventListener("load", () => {
-    // Force the page to start at the top every time
+
+    
     window.scrollTo(0, 0);
-    // Optional: prevent browsers from remembering scroll position
+  
     if ("scrollRestoration" in history) {
       history.scrollRestoration = "manual";
     }
   });
 </script>
   
-  <script src="js.js"></script>
+  <script src="script.js"></script>
   
 </body>
 </html>
