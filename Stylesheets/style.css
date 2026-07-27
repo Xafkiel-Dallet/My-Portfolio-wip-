@@ -159,6 +159,25 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.12);
 }
 
+/*for download pill*/
+a.pill:link,
+a.pill:visited,
+a.pill:hover,
+a.pill:active {
+  color: white;          
+  text-decoration: none; 
+}
+
+.pillsec{
+  color: white;
+  text-align: center;
+  margin: 30px auto;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
 .social-links {
   text-align: center;
   margin: 30px auto;
@@ -200,7 +219,8 @@
   transform: translateY(0);
 }
 
-/* Navbar-specific animation */
+
+
 .navbar.fade-in {
   opacity: 0;
   transform: translateY(-40px); /* start above */
@@ -210,6 +230,25 @@
 .navbar.fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.typing {
+  color: white;
+  font-size: 1.1rem;
+  margin-top: -10px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,.7);
+}
+
+#typing-text {
+  border-right: 2px solid white;
+  padding-right: 3px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 @media (min-width: 768px) {
@@ -254,7 +293,21 @@
     width: min(90%, 900px);
     line-height: 1.15;
   }
+  
+  .pillsec{
+  text-align: left;
+  margin-left: 30px;
+}
 
+  .pillsec.fade-in {
+    transform: translateX(-60px);
+    transition: opacity 0.5s ease-out, transform 1.2s ease-out;
+  }
+
+  .pillsec.fade-in.visible {
+    transform: translateX(0);
+  }
+  
  .navbar.fade-in {
     opacity: 0;
     transform: translateX(-50%) translateY(-40px);
