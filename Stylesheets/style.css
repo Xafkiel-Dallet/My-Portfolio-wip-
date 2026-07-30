@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-image: url('Images/bg.jpg');
+  background-image: url('bg.jpg');
   background-size: cover;
   background-position: center;
   filter: blur(1px);
@@ -86,6 +86,11 @@
   padding: 10px;
   min-width: 160px;
   z-index: 1000;
+}
+
+
+.dropdown-menu.active {
+    display: block;
 }
 
 .hero {
@@ -179,6 +184,30 @@ a.pill:active {
   font-weight: 500;
 }
 
+
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 30px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,.7);
+}
+
+.scroll-indicator h6 {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  margin-top: 8px;
+  animation: bounce 1.5s infinite;
+}
+
+
 .social-links {
   text-align: center;
   margin: 30px auto;
@@ -244,6 +273,19 @@ a.pill:active {
   border-right: 2px solid white;
   padding-right: 3px;
   animation: blink 0.7s infinite;
+}
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
 }
 
 @keyframes blink {
@@ -335,4 +377,4 @@ a.pill:active {
   .firstcontainer.fade-in.visible {
     transform: translateX(0);
   }
-}o
+}
