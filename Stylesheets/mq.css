@@ -1,0 +1,86 @@
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+  
+  .navbar {
+    width: min(95%, 1200px);
+    left: 50%;
+    right: auto;
+    top: 10px;
+    transform: translateX(-50%);
+    border-radius: 12px;
+  }
+
+
+  .navlinks {
+    display: flex;
+    gap: 30px;
+  }
+
+  .profile-container {
+    flex: 1;
+    margin: 0 30px 0 0;
+  }
+
+  .firstcontainer.fade-in {
+    flex: 2;
+    margin: 0 0 0 30px;
+    text-align: left;
+    font-size: 18px;
+    width: min(90%, 900px);
+    line-height: 1.15;
+  }
+  
+  .pillsec{
+  text-align: left;
+  margin-left: 30px;
+}
+
+  .pillsec.fade-in {
+    transform: translateX(-60px);
+    transition: opacity 0.5s ease-out, transform 1.2s ease-out;
+  }
+
+  .pillsec.fade-in.visible {
+    transform: translateX(0);
+  }
+  
+ .navbar.fade-in {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-40px);
+    transition: opacity 0.5s ease-out, transform 0.6s ease-out;
+  }
+
+  .navbar.fade-in.visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .profile-container.fade-in {
+    transform: translateX(60px);
+  }
+
+  .profile-container.fade-in.visible {
+    transform: translateX(0);
+  }
+
+  .firstcontainer.fade-in {
+    transform: translateX(-60px);
+  }
+
+  .firstcontainer.fade-in.visible {
+    transform: translateX(0);
+  }
+}
+
